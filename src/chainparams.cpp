@@ -160,7 +160,7 @@ public:
         vSeeds.push_back(CDNSSeedData("satoshisvision.network", "seed.satoshisvision.network", true));
         vSeeds.push_back(CDNSSeedData("prettywomancoinseed.directory", "seed.prettywomancoinseed.directory", true));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(1, 0);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(55, 0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<uint8_t>(1, 5);
         base58Prefixes[SECRET_KEY] = std::vector<uint8_t>(1, 128);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
@@ -306,7 +306,7 @@ public:
                                       "stn-seed.prettywomancoinseed.directory",
                                       true));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(1, 111);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(55, 111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<uint8_t>(1, 196);
         base58Prefixes[SECRET_KEY] = std::vector<uint8_t>(1, 239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
@@ -424,7 +424,7 @@ public:
                                       "testnet-seed.prettywomancoinseed.directory",
                                       true));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(1, 111);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(55, 111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<uint8_t>(1, 196);
         base58Prefixes[SECRET_KEY] = std::vector<uint8_t>(1, 239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
@@ -550,7 +550,7 @@ public:
 
         chainTxData = ChainTxData{0, 0, 0};
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(1, 111);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(55, 111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<uint8_t>(1, 196);
         base58Prefixes[SECRET_KEY] = std::vector<uint8_t>(1, 239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};

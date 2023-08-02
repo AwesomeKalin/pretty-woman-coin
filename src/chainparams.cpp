@@ -67,7 +67,7 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce,
                                  uint32_t nBits, int32_t nVersion,
                                  const Amount genesisReward) {
     const char *pszTimestamp =
-        "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks";
+        "YouTube 04/07/2023 Pretty Woman Kitchen's BIG Return!! This cryptocurrency will catch you on the flippity flop";
     const CScript genesisOutputScript =
         CScript() << ParseHex("04cb7bfaa2470d56f38167d3f5946407c08d3db97fa30779553b5719ae9b3beb6b78f4c75fd1e412f9e7414085e615bd8f01f23be6d9642035e54d9dd687f75eb5")
                   << OP_CHECKSIG;
@@ -130,14 +130,14 @@ public:
          * normal data. The characters are rarely used upper ASCII, not valid as
          * UTF-8, and produce a large 32-bit integer with any alignment.
          */
-        diskMagic[0] = 0xf9;
-        diskMagic[1] = 0xbe;
-        diskMagic[2] = 0xb4;
-        diskMagic[3] = 0xd9;
-        netMagic[0] = 0xe3;
-        netMagic[1] = 0xe1;
-        netMagic[2] = 0xf3;
-        netMagic[3] = 0xe8;
+        diskMagic[0] = 0xfb;
+        diskMagic[1] = 0x5e;
+        diskMagic[2] = 0x04;
+        diskMagic[3] = 0xdd;
+        netMagic[0] = 0xc3;
+        netMagic[1] = 0xea;
+        netMagic[2] = 0x83;
+        netMagic[3] = 0xef;
         nDefaultPort = 3840;
         nPruneAfterHeight = 100000;
 
@@ -154,9 +154,6 @@ public:
         // Note that of those with the service bits flag, most only support a
         // subset of possible options.
         // Pretty Woman Coin seeder
-        vSeeds.push_back(CDNSSeedData("prettywomancoin.io", "seed.prettywomancoin.io", true));
-        vSeeds.push_back(CDNSSeedData("satoshisvision.network", "seed.satoshisvision.network", true));
-        vSeeds.push_back(CDNSSeedData("prettywomancoinseed.directory", "seed.prettywomancoinseed.directory", true));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(55, 0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<uint8_t>(1, 5);
@@ -299,10 +296,6 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("prettywomancoin.io", "stn-seed.prettywomancoin.io", true));
-        vSeeds.push_back(CDNSSeedData("prettywomancoinseed.directory",
-                                      "stn-seed.prettywomancoinseed.directory",
-                                      true));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(55, 111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<uint8_t>(1, 196);
@@ -414,13 +407,6 @@ public:
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
         // Pretty Woman Coin seeder
-        vSeeds.push_back(CDNSSeedData("prettywomancoin.io", "testnet-seed.prettywomancoin.io", true));
-        vSeeds.push_back(CDNSSeedData("prettywomancoincloud.net",
-                                      "testnet-seed.prettywomancoincloud.net",
-                                      true));
-        vSeeds.push_back(CDNSSeedData("prettywomancoinseed.directory",
-                                      "testnet-seed.prettywomancoinseed.directory",
-                                      true));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<uint8_t>(55, 111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<uint8_t>(1, 196);

@@ -90,7 +90,7 @@ class CreateMinerInfoTest(PrettywomancoinTestFramework):
                 'height': height,
                 'name': self.miner_names[nodenum],
                 'publicIP': '127.0.0.1',
-                'publicPort': '8333',
+                'publicPort': '3840',
                 'minerKeys': allKeys.minerIdKeys,
                 'revocationKeys': allKeys.revocationKeys,
                 'prev_minerKeys': None,

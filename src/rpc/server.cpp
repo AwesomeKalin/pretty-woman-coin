@@ -560,7 +560,7 @@ std::string HelpExampleRpc(const std::string &methodname,
            "\"id\":\"curltest\", "
            "\"method\": \"" +
            methodname + "\", \"params\": [" + args +
-           "] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/\n";
+           "] }' -H 'content-type: text/plain;' http://127.0.0.1:7908/\n";
 }
 
 void RPCSetTimerInterfaceIfUnset(RPCTimerInterface *iface) {

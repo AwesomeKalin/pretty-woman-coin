@@ -75,7 +75,7 @@ address. The same address can be used in more than one notification.
 
 For instance:
 
-    $ prettywomancoind -zmqpubhashtx=tcp://127.0.0.1:28332 \
+    $ prettywomancoind -zmqpubhashtx=tcp://127.0.0.1:27908 \
                -zmqpubrawtx=ipc:///tmp/prettywomancoind.tx.raw
 
 These options can also be provided in prettywomancoin.conf.

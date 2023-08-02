@@ -93,7 +93,7 @@ BOOST_AUTO_TEST_CASE(TestBasicAssociation)
 
     // Check initial state
     CAddress peerAddr { association.GetPeerAddr() };
-    BOOST_CHECK_EQUAL(peerAddr.ToString(), "1.192.176.160:8333");
+    BOOST_CHECK_EQUAL(peerAddr.ToString(), "1.192.176.160:3840");
 
     AssociationStats stats {};
     association.CopyStats(stats);
@@ -101,7 +101,7 @@ BOOST_AUTO_TEST_CASE(TestBasicAssociation)
     CheckInitialStreamStats(stats.streamStats[0]);
     BOOST_CHECK_EQUAL(stats.nLastSend, 0);
     BOOST_CHECK_EQUAL(stats.nLastRecv, 0);
-    BOOST_CHECK_EQUAL(stats.addr.ToString(), "1.192.176.160:8333");
+    BOOST_CHECK_EQUAL(stats.addr.ToString(), "1.192.176.160:3840");
     BOOST_CHECK_EQUAL(stats.nAvgBandwidth, 0U);
     BOOST_CHECK_EQUAL(stats.nSendBytes, 0U);
     BOOST_CHECK_EQUAL(stats.nRecvBytes, 0U);

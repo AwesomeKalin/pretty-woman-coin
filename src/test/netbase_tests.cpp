@@ -67,16 +67,16 @@ BOOST_AUTO_TEST_CASE(netbase_splithost) {
     BOOST_CHECK(TestSplitHost("www.prettywomancoin.org:80", "www.prettywomancoin.org", 80));
     BOOST_CHECK(TestSplitHost("[www.prettywomancoin.org]:80", "www.prettywomancoin.org", 80));
     BOOST_CHECK(TestSplitHost("127.0.0.1", "127.0.0.1", -1));
-    BOOST_CHECK(TestSplitHost("127.0.0.1:8333", "127.0.0.1", 8333));
+    BOOST_CHECK(TestSplitHost("127.0.0.1:3840", "127.0.0.1", 3840));
     BOOST_CHECK(TestSplitHost("[127.0.0.1]", "127.0.0.1", -1));
-    BOOST_CHECK(TestSplitHost("[127.0.0.1]:8333", "127.0.0.1", 8333));
+    BOOST_CHECK(TestSplitHost("[127.0.0.1]:3840", "127.0.0.1", 3840));
     BOOST_CHECK(TestSplitHost("::ffff:127.0.0.1", "::ffff:127.0.0.1", -1));
     BOOST_CHECK(
-        TestSplitHost("[::ffff:127.0.0.1]:8333", "::ffff:127.0.0.1", 8333));
-    BOOST_CHECK(TestSplitHost("[::]:8333", "::", 8333));
-    BOOST_CHECK(TestSplitHost("::8333", "::8333", -1));
-    BOOST_CHECK(TestSplitHost(":8333", "", 8333));
-    BOOST_CHECK(TestSplitHost("[]:8333", "", 8333));
+        TestSplitHost("[::ffff:127.0.0.1]:3840", "::ffff:127.0.0.1", 3840));
+    BOOST_CHECK(TestSplitHost("[::]:3840", "::", 3840));
+    BOOST_CHECK(TestSplitHost("::3840", "::3840", -1));
+    BOOST_CHECK(TestSplitHost(":3840", "", 3840));
+    BOOST_CHECK(TestSplitHost("[]:3840", "", 3840));
     BOOST_CHECK(TestSplitHost("", "", -1));
 }
 
@@ -87,10 +87,10 @@ static bool TestParse(std::string src, std::string canon) {
 
 BOOST_AUTO_TEST_CASE(netbase_lookupnumeric) {
     BOOST_CHECK(TestParse("127.0.0.1", "127.0.0.1:65535"));
-    BOOST_CHECK(TestParse("127.0.0.1:8333", "127.0.0.1:8333"));
+    BOOST_CHECK(TestParse("127.0.0.1:3840", "127.0.0.1:3840"));
     BOOST_CHECK(TestParse("::ffff:127.0.0.1", "127.0.0.1:65535"));
     BOOST_CHECK(TestParse("::", "[::]:65535"));
-    BOOST_CHECK(TestParse("[::]:8333", "[::]:8333"));
+    BOOST_CHECK(TestParse("[::]:3840", "[::]:3840"));
     BOOST_CHECK(TestParse("[127.0.0.1]", "127.0.0.1:65535"));
     BOOST_CHECK(TestParse(":::", "[::]:0"));
 }

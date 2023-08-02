@@ -77,7 +77,7 @@ Bug fixes
 
 * Clicking on a prettywomancoin: URI on Windows should now launch Prettywomancoin-Qt properly.
 
-* When running -testnet, use RPC port 18332 by default.
+* When running -testnet, use RPC port 17908 by default.
 
 * Better detection and handling of corrupt wallet.dat and blkindex.dat files.
   Previous versions would crash with a DB_RUNRECOVERY exception, this

@@ -140,7 +140,7 @@ public:
         netMagic[1] = 0xe1;
         netMagic[2] = 0xf3;
         netMagic[3] = 0xe8;
-        nDefaultPort = 8333;
+        nDefaultPort = 3840;
         nPruneAfterHeight = 100000;
 
         genesis = CreateGenesisBlock(1231006505, 2083236893, 0x1d00ffff, 1,
@@ -399,7 +399,7 @@ public:
         netMagic[1] = 0xe5;
         netMagic[2] = 0xf3;
         netMagic[3] = 0xf4;
-        nDefaultPort = 18333;
+        nDefaultPort = 13840;
         nPruneAfterHeight = 1000;
 
         genesis =
